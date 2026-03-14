@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interview Prep Tracker | 45-Day Mission</title>
+  <title>PrepTrack | 30-Day Job Mission</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
@@ -36,23 +36,38 @@
       <li><a href="#" class="nav-item active" data-page="dashboard">
           <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
         </a></li>
+      <li><a href="#" class="nav-item" data-page="grind">
+          <span class="nav-icon">⚡</span><span class="nav-label">Daily Grind</span><span class="badge-new">HOT</span>
+        </a></li>
       <li><a href="#" class="nav-item" data-page="roadmap">
-          <span class="nav-icon">🗺️</span><span class="nav-label">45-Day Roadmap</span>
+          <span class="nav-icon">🗺️</span><span class="nav-label">Battle Plan</span>
         </a></li>
       <li><a href="#" class="nav-item" data-page="dsa">
-          <span class="nav-icon">⚡</span><span class="nav-label">DSA Topics</span>
+          <span class="nav-icon">🧮</span><span class="nav-label">DSA Topics</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="oops-mastery">
+          <span class="nav-icon">🧩</span><span class="nav-label">OOP Mastery</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="react-interview">
+          <span class="nav-icon">⚛️</span><span class="nav-label">React Interview</span>
         </a></li>
       <li><a href="#" class="nav-item" data-page="react">
-          <span class="nav-icon">⚛️</span><span class="nav-label">React & JS</span>
+          <span class="nav-icon">📗</span><span class="nav-label">React Topics</span>
         </a></li>
       <li><a href="#" class="nav-item" data-page="oops">
-          <span class="nav-icon">🧩</span><span class="nav-label">OOP Concepts</span>
+          <span class="nav-icon">📘</span><span class="nav-label">OOP Topics</span>
         </a></li>
-      <li><a href="#" class="nav-item" data-page="resources">
-          <span class="nav-icon">📚</span><span class="nav-label">Resources</span>
+      <li><a href="#" class="nav-item" data-page="projects">
+          <span class="nav-icon">💼</span><span class="nav-label">My Projects</span>
         </a></li>
       <li><a href="#" class="nav-item" data-page="mock">
           <span class="nav-icon">🎤</span><span class="nav-label">Mock Interview</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="strategy">
+          <span class="nav-icon">🎯</span><span class="nav-label">Job Strategy</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="resources">
+          <span class="nav-icon">📚</span><span class="nav-label">Resources</span>
         </a></li>
     </ul>
 
@@ -250,10 +265,71 @@
       <div class="mock-sections" id="mockSections"></div>
     </section>
 
+    <!-- ===================== DAILY GRIND PAGE ===================== -->
+    <section class="page" id="page-grind">
+      <div class="page-header">
+        <div>
+          <h1>⚡ Daily Grind — 30 Days, 3 Problems/Day</h1>
+          <p class="subtitle">Pattern-based DSA. Learn the pattern once, apply it everywhere. 90 hand-picked problems.
+          </p>
+        </div>
+      </div>
+      <div id="grindContainer"></div>
+    </section>
+
+    <!-- ===================== OOP MASTERY PAGE ===================== -->
+    <section class="page" id="page-oops-mastery">
+      <div class="page-header">
+        <div>
+          <h1>🧩 OOP Mastery — 3 Levels</h1>
+          <p class="subtitle">Level 1 = Basic definitions. Level 2 = Deep understanding. Level 3 = Design thinking.
+            Master all 3.</p>
+        </div>
+      </div>
+      <div id="oopsMasteryContainer"></div>
+    </section>
+
+    <!-- ===================== REACT INTERVIEW PAGE ===================== -->
+    <section class="page" id="page-react-interview">
+      <div class="page-header">
+        <div>
+          <h1>⚛️ React Interview — 30 Must-Know QA</h1>
+          <p class="subtitle">Every question asked in real React/JS interviews at service-based companies. Study like
+            your job depends on it — it does.</p>
+        </div>
+      </div>
+      <div id="reactInterviewContainer"></div>
+    </section>
+
+    <!-- ===================== PROJECTS PAGE ===================== -->
+    <section class="page" id="page-projects">
+      <div class="page-header">
+        <div>
+          <h1>💼 My Projects — Explain Like a Pro</h1>
+          <p class="subtitle">STAR method templates + common project interview questions. Practice until it's natural.
+          </p>
+        </div>
+      </div>
+      <div id="projectsContainer"></div>
+    </section>
+
+    <!-- ===================== JOB STRATEGY PAGE ===================== -->
+    <section class="page" id="page-strategy">
+      <div class="page-header">
+        <div>
+          <h1>🎯 Job Strategy — Land it in 30 Days</h1>
+          <p class="subtitle">What companies actually look for in 2025. Smart moves that accelerate your job search.</p>
+        </div>
+      </div>
+      <div id="strategyContainer"></div>
+    </section>
+
   </main>
 
   <script src="data.js"></script>
+  <script src="data2.js"></script>
   <script src="app.js"></script>
+  <script src="app2.js"></script>
 </body>
 
 </html>
