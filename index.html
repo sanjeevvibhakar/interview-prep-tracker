@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Prep Tracker | 45-Day Mission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- SIDEBAR NAV -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">🎯</span>
+        <span class="logo-text">PrepTrack</span>
+      </div>
+      <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+    </div>
+
+    <div class="nav-profile">
+      <div class="avatar">S</div>
+      <div class="profile-info">
+        <span class="profile-name">Sanjeev</span>
+        <span class="profile-status" id="streakBadge">🔥 0 day streak</span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">🏠</span><span class="nav-label">Dashboard</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="roadmap">
+          <span class="nav-icon">🗺️</span><span class="nav-label">45-Day Roadmap</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="dsa">
+          <span class="nav-icon">⚡</span><span class="nav-label">DSA Topics</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="react">
+          <span class="nav-icon">⚛️</span><span class="nav-label">React & JS</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="oops">
+          <span class="nav-icon">🧩</span><span class="nav-label">OOP Concepts</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="resources">
+          <span class="nav-icon">📚</span><span class="nav-label">Resources</span>
+        </a></li>
+      <li><a href="#" class="nav-item" data-page="mock">
+          <span class="nav-icon">🎤</span><span class="nav-label">Mock Interview</span>
+        </a></li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div class="overall-progress">
+        <span>Overall Progress</span>
+        <div class="mini-bar">
+          <div class="mini-fill" id="sidebarProgress"></div>
+        </div>
+        <span id="sidebarPercent">0%</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main" id="mainContent">
+
+    <!-- ===================== DASHBOARD PAGE ===================== -->
+    <section class="page active" id="page-dashboard">
+      <div class="page-header">
+        <div>
+          <h1>Welcome back, Sanjeev! 💪</h1>
+          <p class="subtitle">You've got this. Every expert was once a beginner.</p>
+        </div>
+        <div class="date-display" id="currentDate"></div>
+      </div>
+
+      <!-- MOTIVATION BANNER -->
+      <div class="motivation-banner" id="motivationBanner">
+        <span class="quote-icon">💬</span>
+        <p id="motivationText">Loading your daily motivation...</p>
+      </div>
+
+      <!-- STATS GRID -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🔥</div>
+          <div class="stat-value" id="statStreak">0</div>
+          <div class="stat-label">Day Streak</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value" id="statCompleted">0</div>
+          <div class="stat-label">Topics Done</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-value" id="statDaysLeft">45</div>
+          <div class="stat-label">Days Remaining</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-value" id="statPercent">0%</div>
+          <div class="stat-label">Overall Progress</div>
+        </div>
+      </div>
+
+      <!-- PROGRESS RINGS -->
+      <div class="progress-section">
+        <h2>Category Progress</h2>
+        <div class="progress-rings">
+          <div class="ring-card">
+            <svg class="ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" class="ring-bg" />
+              <circle cx="60" cy="60" r="50" class="ring-fill dsa-ring" id="dsaRing" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+            </svg>
+            <div class="ring-label">
+              <span class="ring-percent" id="dsaPercent">0%</span>
+              <span>DSA</span>
+            </div>
+          </div>
+          <div class="ring-card">
+            <svg class="ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" class="ring-bg" />
+              <circle cx="60" cy="60" r="50" class="ring-fill react-ring" id="reactRing" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+            </svg>
+            <div class="ring-label">
+              <span class="ring-percent" id="reactPercent">0%</span>
+              <span>React & JS</span>
+            </div>
+          </div>
+          <div class="ring-card">
+            <svg class="ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" class="ring-bg" />
+              <circle cx="60" cy="60" r="50" class="ring-fill oops-ring" id="oopsRing" stroke-dasharray="314"
+                stroke-dashoffset="314" />
+            </svg>
+            <div class="ring-label">
+              <span class="ring-percent" id="oopsPercent">0%</span>
+              <span>OOP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TODAY'S PLAN -->
+      <div class="today-plan">
+        <h2>📋 Today's Focus</h2>
+        <div class="today-tasks" id="todayTasks">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- ACTIVITY CALENDAR -->
+      <div class="calendar-section">
+        <h2>🗓️ Activity (Last 30 Days)</h2>
+        <div class="calendar-grid" id="activityCalendar"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ROADMAP PAGE ===================== -->
+    <section class="page" id="page-roadmap">
+      <div class="page-header">
+        <div>
+          <h1>🗺️ 45-Day Battle Plan</h1>
+          <p class="subtitle">Your structured path from zero to hired — one day at a time.</p>
+        </div>
+      </div>
+
+      <div class="roadmap-phases" id="roadmapPhases">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ===================== DSA PAGE ===================== -->
+    <section class="page" id="page-dsa">
+      <div class="page-header">
+        <div>
+          <h1>⚡ DSA Topics</h1>
+          <p class="subtitle">Striver A2Z sheet — curated for service-based companies (Infosys, IBM, Accenture)</p>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="done">✅ Done</button>
+        <button class="filter-btn" data-filter="pending">⏳ Pending</button>
+      </div>
+      <div class="topic-sections" id="dsaTopics"></div>
+    </section>
+
+    <!-- ===================== REACT PAGE ===================== -->
+    <section class="page" id="page-react">
+      <div class="page-header">
+        <div>
+          <h1>⚛️ React & JavaScript</h1>
+          <p class="subtitle">The most commonly tested frontend topics in service-based interviews.</p>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="done">✅ Done</button>
+        <button class="filter-btn" data-filter="pending">⏳ Pending</button>
+      </div>
+      <div class="topic-sections" id="reactTopics"></div>
+    </section>
+
+    <!-- ===================== OOP PAGE ===================== -->
+    <section class="page" id="page-oops">
+      <div class="page-header">
+        <div>
+          <h1>🧩 OOP Concepts</h1>
+          <p class="subtitle">Understand & explain like a pro — with real-world examples.</p>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="done">✅ Done</button>
+        <button class="filter-btn" data-filter="pending">⏳ Pending</button>
+      </div>
+      <div class="topic-sections" id="oopsTopics"></div>
+    </section>
+
+    <!-- ===================== RESOURCES PAGE ===================== -->
+    <section class="page" id="page-resources">
+      <div class="page-header">
+        <div>
+          <h1>📚 Best Resources</h1>
+          <p class="subtitle">Handpicked, free, and beginner-friendly — no fluff.</p>
+        </div>
+      </div>
+      <div class="resources-grid" id="resourcesGrid"></div>
+    </section>
+
+    <!-- ===================== MOCK INTERVIEW PAGE ===================== -->
+    <section class="page" id="page-mock">
+      <div class="page-header">
+        <div>
+          <h1>🎤 Mock Interview Prep</h1>
+          <p class="subtitle">Common HR + Technical questions asked at Infosys, IBM, Accenture, TCS & more.</p>
+        </div>
+      </div>
+
+      <div class="mock-sections" id="mockSections"></div>
+    </section>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
